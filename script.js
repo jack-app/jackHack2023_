@@ -32,7 +32,7 @@ function sendAlert() {
 
 function Top() {
   // 5秒経過したらモーダルを表示する
-  if(time==295){
+  if (time == 295) {
     modal.style.display = "block";
   }
 }
