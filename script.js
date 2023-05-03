@@ -3,7 +3,8 @@ const stopButton = document.getElementById("stop");
 const resetButton = document.getElementById("reset");
 const timeDisplay = document.querySelector(".display");
 const modal = document.getElementById("modal");
-const modalClose = document.getElementById("close");
+const success = document.getElementById("success");
+const fail = document.getElementById("fail");
 
 const topAudio = new Audio("./audio/Lovers.mp3");
 const successAudio = new Audio("./audio/幸せな誓い.mp3");
@@ -31,6 +32,9 @@ function sendAlert() {
 
 function Top() {
   // 5秒経過したらモーダルを表示する
+  if(time==295){
+    modal.style.display = "block";
+  }
 }
 
 function updateTimerDisplay() {
@@ -49,6 +53,7 @@ function startTimer() {
       updateTimerDisplay();
       playTopAudio();
       sendAlert();
+      Top();
     } else {
       clearInterval(timer);
     }
@@ -69,9 +74,12 @@ function resetTimer() {
 startButton.addEventListener("click", startTimer);
 stopButton.addEventListener("click", stopTimer);
 resetButton.addEventListener("click", resetTimer);
-modalClose.addEventListener("click", () => {
+success.addEventListener("click", () => {
   modal.style.display = "none";
-  successAudio.pause();
+  successAudio.play();
 });
-
+fail.addEventListener("click", () => {
+  modal.style.display = "none";
+  failAudio.play();
+});
 updateTimerDisplay();
