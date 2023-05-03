@@ -13,7 +13,7 @@
 
 svg {
   -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 
 /*  円を描く動画の準備   */
