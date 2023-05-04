@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>5分間タイマー</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="timer">
-        <div class="kanransya">
+      <!-- <div class="kanransya">
             <div class="rotate">
                 <div class="rotate-ctn">
                     <div class="box box-1">
@@ -37,36 +36,25 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="display">5:00</div>
-        <svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
-        <g>
-          <title>Pie Timer</title>
-          <circle
-            id="circle"
-            class="timer-circle"
-            r="40"
-            cy="81"
-            cx="81"
-            stroke-width="8"
-            stroke="#6fdb6f"
-            fill="none"
-          />
-        </g>
-      </svg>
+        </div> -->
+      <div class="display">5:00</div>
 
-        <button id="start">スタート</button>
-        <button id="stop">ストップ</button>
-        <button id="reset">リセット</button>
+      <button id="start">スタート</button>
+      <button id="stop">ストップ</button>
+      <button id="reset">リセット</button>
+    </div>
+    <div class="container">
+      <div id="number">要素1</div>
+      <div id="time">要素2</div>
+      <div id="plan">要素3</div>
     </div>
     <div class="modal" id="modal">
-        <div class="modal-content">
-            <p>告白は...?</p>
-            <button id="success">成功</button>
-            <button id="fail">失敗</button>
-        </div>
+      <div class="modal-content">
+        <p>告白は...?</p>
+        <button id="success">成功</button>
+        <button id="fail">失敗</button>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
