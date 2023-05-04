@@ -3,7 +3,38 @@
   float: left;
 } */
 
-/*  円を描く動画の準備   */
+/* .display {
+    text-align: center;
+    position: absolute;
+    line-height: 4em;
+    width: 100%;
+    font-size: 2.5em;
+} */
+.display {
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+}
+.timeModal {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: auto;
+  height: 15px;
+  border-radius: 15px;
+}
+.timeModal,
+select,
+option {
+  width: 219px;
+  height: 22px;
+  text-align: center;
+  font-size: 18px;
+  background: white;
+  border-radius: 10px;
+}
 
 .modal {
   display: none;
