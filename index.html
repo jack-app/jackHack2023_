@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>5分間タイマー</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="timer">
-        <div class="kanransya">
+      <!-- <div class="kanransya">
             <div class="rotate">
                 <div class="rotate-ctn">
                     <div class="box box-1">
@@ -37,36 +36,28 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="display">5:00</div>
-        <svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
-        <g>
-          <title>Pie Timer</title>
-          <circle
-            id="circle"
-            class="timer-circle"
-            r="40"
-            cy="81"
-            cx="81"
-            stroke-width="8"
-            stroke="#6fdb6f"
-            fill="none"
-          />
-        </g>
-      </svg>
-
-        <button id="start">スタート</button>
-        <button id="stop">ストップ</button>
-        <button id="reset">リセット</button>
+        </div> -->
+      <div class="display">00:00</div>
+      <div class="timeModal" id="timeModal">
+        <select id="selectTime">
+          <option value="300">05:00</option>
+          <option value="600">10:00</option>
+          <option value="900">15:00</option>
+          <option value="1200">20:00</option>
+          <option value="1500">25:00</option>
+        </select>
+      </div>
+      <button id="start">スタート</button>
+      <button id="stop">ストップ</button>
+      <button id="reset">リセット</button>
     </div>
     <div class="modal" id="modal">
-        <div class="modal-content">
-            <p>告白は...?</p>
-            <button id="success">成功</button>
-            <button id="fail">失敗</button>
-        </div>
+      <div class="modal-content">
+        <p>告白は...?</p>
+        <button id="success">成功</button>
+        <button id="fail">失敗</button>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
