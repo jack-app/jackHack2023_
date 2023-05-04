@@ -7,53 +7,43 @@
 </head>
 
 <body>
-    <div class="timer">
-        <div class="kanransya">
+    <div class="kanransya">
+        <div class="canvas-wrapper">
+            <canvas id="canvas" class="canvas"></canvas>
+        </div>
+        <div class="sample-1">
             <div class="rotate">
                 <div class="rotate-ctn">
                     <div class="box box-1">
-                        <div class="parts">01</div>
+                        <div class="parts one">１</div>
                     </div>
                     <div class="box box-2">
-                        <div class="parts">02</div>
+                        <div class="parts two">２</div>
                     </div>
                     <div class="box box-3">
-                        <div class="parts">03</div>
+                        <div class="parts three">３</div>
                     </div>
                     <div class="box box-4">
-                        <div class="parts">04</div>
+                        <div class="parts four">４</div>
                     </div>
                     <div class="box box-5">
-                        <div class="parts">05</div>
+                        <div class="parts five">５</div>
                     </div>
                     <div class="box box-6">
-                        <div class="parts">06</div>
+                        <div class="parts six">６</div>
                     </div>
                     <div class="box box-7">
-                        <div class="parts">07</div>
+                        <div class="parts seven">７</div>
                     </div>
                     <div class="box box-8">
-                        <div class="parts">08</div>
+                        <div class="parts eight">８</div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="timer">
         <div class="display">5:00</div>
-        <svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
-        <g>
-          <title>Pie Timer</title>
-          <circle
-            id="circle"
-            class="timer-circle"
-            r="40"
-            cy="81"
-            cx="81"
-            stroke-width="8"
-            stroke="#6fdb6f"
-            fill="none"
-          />
-        </g>
-      </svg>
 
         <button id="start">スタート</button>
         <button id="stop">ストップ</button>
