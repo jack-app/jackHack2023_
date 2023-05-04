@@ -37,7 +37,7 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-
+}
 .display {
   text-align: center;
   background-color: white;
@@ -62,7 +62,6 @@ option {
   font-size: 18px;
   background: white;
   border-radius: 10px;
-
 }
 
 .modal {
@@ -94,11 +93,13 @@ option {
   font-family: "Avenir Next";
   text-align: center;
 }
+
 button {
   border: none;
   background-color: transparent;
   outline: none;
 }
+
 .success .fail {
   border: none;
   background: transparent;
