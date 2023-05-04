@@ -3,12 +3,11 @@ const stopButton = document.getElementById("stop");
 const resetButton = document.getElementById("reset");
 const timeDisplay = document.querySelector(".display");
 const modal = document.getElementById("modal");
+const timeModal = document.getElementById("timeModal");
 const success = document.getElementById("success");
 const fail = document.getElementById("fail");
-const circle = document.querySelector(".timer-circle");
 const selectTime = document.getElementById("selectTime");
-const timeSetButton = document.querySelector(".modalbtn");
-const modalCloseButton = document.querySelector(".modalclose");
+
 const topAudio = new Audio("./audio/Lovers.mp3");
 const successAudio = new Audio("./audio/幸せな誓い.mp3");
 const failAudio = new Audio("./audio/さようなら.mp3");
@@ -81,28 +80,29 @@ function resetTimer() {
   circle.style.strokeDashoffset = initialOffset;
   i = 0;
 }
-function timeSetModal() {
-  timemodal.style.display = "block";
-}
-function timeSetModalClose() {
-  timemodal.style.display = "none";
-}
-timeSetButton.addEventListener("click", timeSetModal);
-modalCloseButton.addEventListener("click", timeSetModalClose);
+
 startButton.addEventListener("click", startTimer);
 stopButton.addEventListener("click", stopTimer);
 resetButton.addEventListener("click", resetTimer);
+timeDisplay.addEventListener("click", () => {
+  timeModal.style.display = "block";
+});
+
 success.addEventListener("click", () => {
   modal.style.display = "none";
   successAudio.play();
 });
+
 fail.addEventListener("click", () => {
   modal.style.display = "none";
   failAudio.play();
 });
+
 selectTime.addEventListener("change", () => {
   time = selectTime.value;
   initTime = selectTime.value;
+  timeModal.style.display = "none";
   updateTimerDisplay();
 });
+
 updateTimerDisplay();
