@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>5分間タイマー</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="timer">
-      <div class="display">5:00</div>
-      <svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
+        <div class="kanransya">
+            <div class="rotate">
+                <div class="rotate-ctn">
+                    <div class="box box-1">
+                        <div class="parts">01</div>
+                    </div>
+                    <div class="box box-2">
+                        <div class="parts">02</div>
+                    </div>
+                    <div class="box box-3">
+                        <div class="parts">03</div>
+                    </div>
+                    <div class="box box-4">
+                        <div class="parts">04</div>
+                    </div>
+                    <div class="box box-5">
+                        <div class="parts">05</div>
+                    </div>
+                    <div class="box box-6">
+                        <div class="parts">06</div>
+                    </div>
+                    <div class="box box-7">
+                        <div class="parts">07</div>
+                    </div>
+                    <div class="box box-8">
+                        <div class="parts">08</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display">5:00</div>
+        <svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
         <g>
           <title>Pie Timer</title>
           <circle
@@ -23,17 +55,18 @@
         </g>
       </svg>
 
-      <button id="start">スタート</button>
-      <button id="stop">ストップ</button>
-      <button id="reset">リセット</button>
+        <button id="start">スタート</button>
+        <button id="stop">ストップ</button>
+        <button id="reset">リセット</button>
     </div>
     <div class="modal" id="modal">
-      <div class="modal-content">
-        <p>告白は...?</p>
-        <button id="success">成功</button>
-        <button id="fail">失敗</button>
-      </div>
+        <div class="modal-content">
+            <p>告白は...?</p>
+            <button id="success">成功</button>
+            <button id="fail">失敗</button>
+        </div>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
