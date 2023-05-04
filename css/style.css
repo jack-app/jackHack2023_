@@ -1,167 +1,194 @@
 .timer {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 
-.display {
-    text-align: center;
-    position: absolute;
-    line-height: 4em;
-    width: 100%;
-    font-size: 2.5em;
-}
+/* .display {
+  text-align: center;
+  position: absolute;
+  line-height: 4em;
+  width: 100%;
+  font-size: 2.5em;
+} */
 
 svg {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
-
 
 /*  円を描く動画の準備   */
 
 .timer-circle {
-    stroke-dasharray: 280;
-    stroke-dashoffset: 280;
-    transition: all 1s linear;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  transition: all 1s linear;
 }
 
 .start {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .start:hover {
-    background-color: #0069d9;
+  background-color: #0069d9;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50px;
+  top: 200px;
+  width: 50%;
+  height: 45%;
+  overflow: auto;
+  background-color: #f7f5eb;
 }
 
 .modal-content {
-    background-color: white;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+  background-color: #f7f5eb;
+  margin: 5% auto;
+  padding: 10px;
+  width: 80%;
+  left: 200px;
+  margin: auto;
 }
 
+.modal-content p {
+  color: #a9907e;
+  font-size: 50px;
+  /* margin-left: 70px; */
+  text-align: center;
+}
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.success .fail {
+  border: none;
+  background: transparent;
+}
+.button-wrapper {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 60%;
+}
+
+/* .fail {
+  margin-left: 100px;
+}
+.success {
+  margin-left: 10px;
+} */
 #close {
-    float: right;
+  float: right;
 }
-
 
 /* kanransya */
 
 .kanransya {
-    position: relative;
-    width: 70%;
-    padding-top: 70%;
-    margin: 20px auto;
-    overflow: hidden;
+  position: relative;
+  width: 70%;
+  padding-top: 70%;
+  margin: 20px auto;
+  overflow: hidden;
 }
 
 .kanransya:after {
-    content: '';
-    display: block;
-    width: 85%;
-    padding-top: 85%;
-    border: solid 2px #000;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+  content: "";
+  display: block;
+  width: 85%;
+  padding-top: 85%;
+  border: solid 2px #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .rotate {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .rotate .rotate-ctn {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    animation: 100s linear big-circle infinite;
-    /* 大枠を回転させているアニメーション */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: 100s linear big-circle infinite;
+  /* 大枠を回転させているアニメーション */
 }
 
 .rotate .box {
-    position: absolute;
-    width: 100px;
-    height: 50%;
-    transform-origin: 50% 100%;
+  position: absolute;
+  width: 100px;
+  height: 50%;
+  transform-origin: 50% 100%;
 }
-
 
 /* 各コンテンツの文字を上向きにする */
 
 .rotate .box.box-1 {
-    left: 50%;
-    transform: translate(-50%, 0);
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .rotate .box.box-2 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(45deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(45deg);
 }
 
 .rotate .box.box-3 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(90deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(90deg);
 }
 
 .rotate .box.box-4 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(135deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(135deg);
 }
 
 .rotate .box.box-5 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(180deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
 }
 
 .rotate .box.box-6 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(225deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(225deg);
 }
 
 .rotate .box.box-7 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(270deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(270deg);
 }
 
 .rotate .box.box-8 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(315deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(315deg);
 }
 
 .rotate .box .parts {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
-    background: #eee;
-    text-align: center;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  background: #eee;
+  text-align: center;
 }
