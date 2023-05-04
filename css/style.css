@@ -1,10 +1,15 @@
+html,
 body {
-    background-color: #F7F5EB;
+  background-color: #f7f5eb;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
 }
 
 .timer {
   position: relative;
-  float: left;
+  /* float: left; */
 }
 
 #start {
@@ -34,36 +39,38 @@ body {
   display: inline-block;
   margin: 0rem 1rem;
 }
-.button-wrapper1 {
-  margin-top: 90%;
-  margin-left: 15%;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
+
 .display {
   text-align: center;
-  background-color: white;
-  border-radius: 15px;
-  position: relative;
+  line-height: 3em;
+  font-size: 2.5em;
+  position: absolute;
+  top: 300px;
+  left: 430px;
+  width: 14%;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 32px;
+  z-index: 10;
 }
 .timeModal {
   display: none;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  z-index: 1001;
+  top: 400px;
+  right: 400px;
   width: auto;
-  height: 15px;
+  height: 100px;
   border-radius: 15px;
 }
 .timeModal,
 select,
 option {
-  width: 219px;
-  height: 22px;
+  width: 150px;
+  height: 100px;
   text-align: center;
-  font-size: 18px;
+  font-size: 32px;
   background: white;
   border-radius: 10px;
 }
@@ -71,7 +78,7 @@ option {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   width: 100%;
   height: 100vh;
   overflow: auto;
@@ -81,6 +88,7 @@ option {
 }
 
 .modal-content {
+  z-index: 1000;
   background-color: #f7f5eb;
   padding: 10px;
   width: 70%;
@@ -96,6 +104,18 @@ option {
   font-size: 50px;
   font-family: "Avenir Next";
   text-align: center;
+}
+
+.button-wrapper1 {
+  margin-top: 20%;
+  margin-left: 15%;
+  margin-bottom: 200px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  /* text-align: center; */
+  margin: 0 auto;
+  width: 80%;
 }
 
 button {
@@ -116,52 +136,48 @@ button {
   height: 60%;
 }
 
-#close {
-  float: right;
-}
-
 /* kanransya */
 .canvas-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0em 0em;
-    margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0em 0em;
+  margin: 0;
 }
 
 .canvas {
-    position: absolute;
-    top: 0px;
-    left: 140px;
-    z-index: 2;
-    /* width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 140px;
+  z-index: 2;
+  /* width: 100%;
     height: 100%; */
 }
 
+.kanransha {
+  overflow: hidden;
+}
 .sample-1 {
-    position: relative;
-    width: 80%;
-    padding-top: 70%;
-    margin: 20px auto;
-    overflow: hidden;
+  position: relative;
+  width: 75%;
+  padding-top: 70%;
+  margin: 20px auto;
+  overflow: hidden;
 }
 
 .sample-1:after {
-    content: '';
-    display: block;
-    width: 85%;
-    padding-top: 85%;
-    border: solid 2px #000;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-
+  content: "";
+  display: block;
+  width: 85%;
+  padding-top: 85%;
+  border: solid 2px #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
-
-
 
 .rotate {
   width: 100%;
@@ -191,13 +207,13 @@ button {
 /* 各コンテンツの文字を上向きにする */
 
 .rotate .box.box-1 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(180deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
 }
 
 .rotate .box.box-2 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(135deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(135deg);
 }
 
 .rotate .box.box-3 {
@@ -206,18 +222,18 @@ button {
 }
 
 .rotate .box.box-4 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(45deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(45deg);
 }
 
 .rotate .box.box-5 {
-    left: 50%;
-    transform: translate(-50%, 0);
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .rotate .box.box-6 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(315deg);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(315deg);
 }
 
 .rotate .box.box-7 {
@@ -226,85 +242,61 @@ button {
 }
 
 .rotate .box.box-8 {
-    left: 50%;
-    transform: translate(-50%, 0) rotate(225deg);
-}
-
-.rotate .box .parts {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    padding: 24px 0px;
-    background: #fff;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 20px;
-    /* boxの角の丸さ */
-}
-
-
-/* 文字のみ回転 */
-
-.one {
-    transform: rotate(180deg);
-}
-
-.two {
-    transform: rotate(-135deg);
-}
-
-.three {
-    transform: rotate(-90deg);
-}
-
-.four {
-    transform: rotate(-45deg);
-}
-
-.five {
-    transform: rotate(0deg);
-}
-
-.six {
-    transform: rotate(-315deg);
-}
-
-.seven {
-    transform: rotate(-270deg);
-}
-
-.eight {
-    transform: rotate(-225deg);
-}
-
-
-/* timer */
-
-.display {
-    position: absolute;
-    top: 300px;
-    left: 430px;
-    width: 14%;
-    height: 100px;
-    background-color: #fff;
-    border-radius: 10px;
-    font-size: 32px;
-    margin: 0 auto;
   left: 50%;
-  transform: translate(-50%, 0) rotate(315deg);
+  transform: translate(-50%, 0) rotate(225deg);
 }
 
 .rotate .box .parts {
   position: relative;
   width: 80%;
   margin: 0 auto;
-  padding: 20px 0;
-  background: #eee;
+  padding: 24px 0px;
+  background: #fff;
   text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  /* boxの角の丸さ */
 }
+
+/* 文字のみ回転 */
+
+.one {
+  transform: rotate(180deg);
+}
+
+.two {
+  transform: rotate(-135deg);
+}
+
+.three {
+  transform: rotate(-90deg);
+}
+
+.four {
+  transform: rotate(-45deg);
+}
+
+.five {
+  transform: rotate(0deg);
+}
+
+.six {
+  transform: rotate(-315deg);
+}
+
+.seven {
+  transform: rotate(-270deg);
+}
+
+.eight {
+  transform: rotate(-225deg);
+}
+
+/* timer */
 
 .datingPlan {
   /* display: flex; */
+  margin: 150px 10px 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;

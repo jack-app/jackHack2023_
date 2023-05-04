@@ -4,59 +4,71 @@
     <title>5分間タイマー</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
-
-<body>
-    <div class="kanransya">
-        <div class="canvas-wrapper">
-            <canvas id="canvas" class="canvas"></canvas>
+  <body>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <p>告白は...?</p>
+        <div class="button-wrapper2">
+          <button type="button" class="success">
+            <img src="./img/heartsuccess.png" height="100" width="100" />
+          </button>
+          <button type="button" class="fail">
+            <img src="./img/heartfail.png" height="100" width="100" />
+          </button>
         </div>
-        <div class="sample-1">
-            <div class="rotate">
-                <div class="rotate-ctn">
-                    <div class="box box-1">
-                        <div class="parts one">１</div>
-                    </div>
-                    <div class="box box-2">
-                        <div class="parts two">２</div>
-                    </div>
-                    <div class="box box-3">
-                        <div class="parts three">３</div>
-                    </div>
-                    <div class="box box-4">
-                        <div class="parts four">４</div>
-                    </div>
-                    <div class="box box-5">
-                        <div class="parts five">５</div>
-                    </div>
-                    <div class="box box-6">
-                        <div class="parts six">６</div>
-                    </div>
-                    <div class="box box-7">
-                        <div class="parts seven">７</div>
-                    </div>
-                    <div class="box box-8">
-                        <div class="parts eight">８</div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-      <div class="display">00:00</div>
-      <div class="timeModal" id="timeModal">
-        <select id="selectTime">
-          <option value="300">05:00</option>
-          <option value="600">10:00</option>
-          <option value="900">15:00</option>
-          <option value="1200">20:00</option>
-          <option value="1500">25:00</option>
-        </select>
-      </div>
-      <button id="stop">ストップ</button>
-       <div class="button-wrapper1">
-      <button id="start">スタート</button>
-      
-      <button id="reset">リセット</button>
       </div>
     </div>
+    <div class="karansha">
+      <div class="canvas-wrapper">
+        <canvas id="canvas" class="canvas"></canvas>
+      </div>
+      <div class="sample-1">
+        <div class="rotate">
+          <div class="rotate-ctn">
+            <div class="box box-1">
+              <div class="parts one">１</div>
+            </div>
+            <div class="box box-2">
+              <div class="parts two">２</div>
+            </div>
+            <div class="box box-3">
+              <div class="parts three">３</div>
+            </div>
+            <div class="box box-4">
+              <div class="parts four">４</div>
+            </div>
+            <div class="box box-5">
+              <div class="parts five">５</div>
+            </div>
+            <div class="box box-6">
+              <div class="parts six">６</div>
+            </div>
+            <div class="box box-7">
+              <div class="parts seven">７</div>
+            </div>
+            <div class="box box-8">
+              <div class="parts eight">８</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="display">00:00</div>
+    <div class="timeModal" id="timeModal">
+      <select id="selectTime">
+        <option value="300">05:00</option>
+        <option value="600">10:00</option>
+        <option value="900">15:00</option>
+        <option value="1200">20:00</option>
+        <option value="1500">25:00</option>
+      </select>
+    </div>
+    <button id="stop">ストップ</button>
+    <div class="button-wrapper1">
+      <button id="start">スタート</button>
+      <button id="reset">リセット</button>
+    </div>
+
     <div class="datingPlan">
       <div class="signBoard">♡デートプラン♡</div>
       <div class="container">
@@ -100,20 +112,7 @@
         <input type="text" class="memo" />
       </div>
     </div>
-    <div class="modal" id="modal">
-      <div class="modal-content">
-        <p>告白は...?</p>
-        <div class="button-wrapper2">
-          <button type="button" class="success">
-            <img src="./img/heartsuccess.png" height="100" width="100" />
-          </button>
-          <button type="button" class="fail">
-            <img src="./img/heartfail.png" height="100" width="100" />
-          </button>
-        </div>
 
-      </div>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>
