@@ -3,27 +3,6 @@
   float: left;
 }
 
-/* .display {
-  text-align: center;
-  position: absolute;
-  line-height: 4em;
-  width: 100%;
-  font-size: 2.5em;
-} */
-
-svg {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(90deg);
-}
-
-/*  円を描く動画の準備   */
-
-.timer-circle {
-  stroke-dasharray: 280;
-  stroke-dashoffset: 280;
-  transition: all 1s linear;
-}
-
 #start {
   font-size: 3rem;
   font-family: "Avenir Next";
@@ -58,6 +37,32 @@ svg {
   display: flex;
   justify-content: space-between;
   text-align: center;
+
+.display {
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+}
+.timeModal {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: auto;
+  height: 15px;
+  border-radius: 15px;
+}
+.timeModal,
+select,
+option {
+  width: 219px;
+  height: 22px;
+  text-align: center;
+  font-size: 18px;
+  background: white;
+  border-radius: 10px;
+
 }
 
 .modal {
@@ -208,4 +213,67 @@ button {
   padding: 20px 0;
   background: #eee;
   text-align: center;
+}
+
+.datingPlan {
+  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: #eae0da;
+  border-radius: 10px;
+  border: 0.5px solid #000000;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.number {
+  font-size: 35px;
+  line-height: 75px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background-color: #fff;
+  margin: 10px 20px 8px 0;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+}
+
+.time {
+  text-align: center;
+  /*テキストを上下中央に*/
+  line-height: 75px;
+  font-size: 35px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background-color: #fff;
+  margin: 10px 50px 8px 0;
+  height: 70px;
+  width: 180px;
+}
+
+.memo {
+  font-size: 50px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  width: 700px;
+  height: 65px;
+  margin: 10px;
+  text-align: center;
+}
+#last {
+  margin-bottom: 50px;
+}
+
+.signBoard {
+  font-size: 35px;
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
