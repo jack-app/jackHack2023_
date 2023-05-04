@@ -3,9 +3,10 @@ const stopButton = document.getElementById("stop");
 const resetButton = document.getElementById("reset");
 const timeDisplay = document.querySelector(".display");
 const modal = document.getElementById("modal");
-const success = document.getElementById("success");
-const fail = document.getElementById("fail");
-const circle = document.querySelector(".timer-circle");
+const success = document.querySelector(".success");
+const fail = document.querySelector(".fail");
+const timeModal = document.getElementById("timeModal");
+const selectTime = document.getElementById("selectTime");
 const topAudio = new Audio("./audio/Lovers.mp3");
 const successAudio = new Audio("./audio/幸せな誓い.mp3");
 const failAudio = new Audio("./audio/さようなら.mp3");
@@ -14,7 +15,8 @@ const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
 let timer;
-let time = 300;
+let time = selectTime.value;
+let initTime = selectTime.value;
 var initialOffset = 280;
 var i = 1;
 
@@ -50,20 +52,18 @@ function updateTimerDisplay() {
 }
 
 function startTimer() {
-    clearInterval(timer);
-    timer = setInterval(() => {
-        if (time > 0) {
-            time--;
-            i++;
-            updateTimerDisplay();
-            playTopAudio();
-            sendAlert();
-            Top();
-            circle.style.strokeDashoffset = initialOffset - i * (initialOffset / 300);
-        } else {
-            clearInterval(timer);
-        }
-    }, 1000);
+  clearInterval(timer);
+  timer = setInterval(() => {
+    if (time > 0) {
+      time--;
+      updateTimerDisplay();
+      playTopAudio();
+      sendAlert();
+      Top();
+    } else {
+      clearInterval(timer);
+    }
+  }, 1000);
 }
 
 function stopTimer() {
@@ -74,24 +74,35 @@ function stopTimer() {
 }
 
 function resetTimer() {
-    stopTimer();
-    time = 300;
-    updateTimerDisplay();
-    circle.style.strokeDashoffset = initialOffset;
-    i = 0;
+  stopTimer();
+  time = initTime;
+  updateTimerDisplay();
 }
 
 startButton.addEventListener("click", startTimer);
 stopButton.addEventListener("click", stopTimer);
 resetButton.addEventListener("click", resetTimer);
+timeDisplay.addEventListener("click", () => {
+  timeModal.style.display = "block";
+});
+
 success.addEventListener("click", () => {
     modal.style.display = "none";
     successAudio.play();
 });
+
 fail.addEventListener("click", () => {
     modal.style.display = "none";
     failAudio.play();
 });
+
+selectTime.addEventListener("change", () => {
+  time = selectTime.value;
+  initTime = selectTime.value;
+  timeModal.style.display = "none";
+  updateTimerDisplay();
+});
+
 updateTimerDisplay();
 
 
