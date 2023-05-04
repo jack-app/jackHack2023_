@@ -48,6 +48,13 @@ function updateTimerDisplay() {
   timeDisplay.textContent = `${minutes}:${seconds}`;
 }
 
+function updateNumberDisplay() {
+  const minutes = Math.floor(time / (8 * 60))
+    .toString()
+    .padStart(2, "0");
+  const seconds = (time % (8 * 60)).toString().padStart(2, "0");
+  timeDisplay.textContent = `${minutes}:${seconds}`;
+}
 function startTimer() {
   clearInterval(timer);
   timer = setInterval(() => {
