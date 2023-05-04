@@ -6,13 +6,14 @@ const modal = document.getElementById("modal");
 const success = document.getElementById("success");
 const fail = document.getElementById("fail");
 const circle = document.querySelector(".timer-circle");
+const selectTime = document.querySelector("#selecttime");
 const topAudio = new Audio("./audio/Lovers.mp3");
 const successAudio = new Audio("./audio/幸せな誓い.mp3");
 const failAudio = new Audio("./audio/さようなら.mp3");
 const alertAudio = new Audio("./audio/itemgetsea.mp3");
 
 let timer;
-let time = 300;
+let time = selectTime.value;
 var initialOffset = 280;
 var i = 1;
 function playTopAudio() {
