@@ -47,9 +47,12 @@
           <option value="1500">25:00</option>
         </select>
       </div>
-      <button id="start">スタート</button>
       <button id="stop">ストップ</button>
+       <div class="button-wrapper1">
+      <button id="start">スタート</button>
+      
       <button id="reset">リセット</button>
+      </div>
     </div>
     <div class="datingPlan">
       <div class="signBoard">♡デートプラン♡</div>
@@ -97,8 +100,15 @@
     <div class="modal" id="modal">
       <div class="modal-content">
         <p>告白は...?</p>
-        <button id="success">成功</button>
-        <button id="fail">失敗</button>
+        <div class="button-wrapper2">
+          <button type="button" class="success">
+            <img src="./img/heartsuccess.png" height="100" width="100" />
+          </button>
+          <button type="button" class="fail">
+            <img src="./img/heartfail.png" height="100" width="100" />
+          </button>
+        </div>
+
       </div>
     </div>
     <script src="script.js"></script>
