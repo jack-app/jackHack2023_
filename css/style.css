@@ -24,31 +24,49 @@ svg {
   transition: all 1s linear;
 }
 
-.start {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
+#start {
+  font-size: 3rem;
+  font-family: "Avenir Next";
+  padding: 0.5rem 5rem;
+  background-color: #eac7c7;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  display: inline-block;
+  margin: 0rem 1rem;
 }
 
-.start:hover {
-  background-color: #0069d9;
+#reset {
+  font-size: 3rem;
+  font-family: "Avenir Next";
+  padding: 0.5rem 5rem;
+  background-color: #b0daff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin: 0rem 1rem;
+}
+.button-wrapper1 {
+  margin-top: 90%;
+  margin-left: 15%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .modal {
   display: none;
   position: fixed;
   z-index: 1;
-  /* left: 15%;
-  top: 40%; */
   width: 100%;
   height: 100vh;
   overflow: auto;
-  /* background-color: #f7f5eb; */
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
   margin: auto;
@@ -56,7 +74,6 @@ svg {
 
 .modal-content {
   background-color: #f7f5eb;
-  /* margin: 5% auto; */
   padding: 10px;
   width: 70%;
   height: 350px;
@@ -69,7 +86,7 @@ svg {
 .modal-content p {
   color: #a9907e;
   font-size: 50px;
-  /* margin-left: 70px; */
+  font-family: "Avenir Next";
   text-align: center;
 }
 button {
@@ -81,7 +98,7 @@ button {
   border: none;
   background: transparent;
 }
-.button-wrapper {
+.button-wrapper2 {
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -89,12 +106,6 @@ button {
   height: 60%;
 }
 
-/* .fail {
-  margin-left: 100px;
-}
-.success {
-  margin-left: 10px;
-} */
 #close {
   float: right;
 }
