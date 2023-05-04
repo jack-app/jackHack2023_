@@ -7,7 +7,6 @@ const timeModal = document.getElementById("timeModal");
 const success = document.getElementById("success");
 const fail = document.getElementById("fail");
 const selectTime = document.getElementById("selectTime");
-
 const topAudio = new Audio("./audio/Lovers.mp3");
 const successAudio = new Audio("./audio/幸せな誓い.mp3");
 const failAudio = new Audio("./audio/さようなら.mp3");
@@ -54,12 +53,10 @@ function startTimer() {
   timer = setInterval(() => {
     if (time > 0) {
       time--;
-      i++;
       updateTimerDisplay();
       playTopAudio();
       sendAlert();
       Top();
-      circle.style.strokeDashoffset = initialOffset - i * (initialOffset / 300);
     } else {
       clearInterval(timer);
     }
@@ -77,8 +74,6 @@ function resetTimer() {
   stopTimer();
   time = initTime;
   updateTimerDisplay();
-  circle.style.strokeDashoffset = initialOffset;
-  i = 0;
 }
 
 startButton.addEventListener("click", startTimer);
