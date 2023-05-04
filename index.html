@@ -37,14 +37,20 @@
                 </div>
             </div>
         </div> -->
-      <div class="display">00:00</div>
-      <select id="selectTime">
-        <option value="300" selected>05:00</option>
-        <option value="600">10:00</option>
-        <option value="900">15:00</option>
-        <option value="1200">20:00</option>
-        <option value="1500">25:00</option>
-      </select>
+      <button id="modalbtn" class="modalbtn">時間</button>
+      <div id="timemodal" class="timemodal">
+        <div id="timemodal-content" class="timemodal-content">
+          <div class="display">00:00</div>
+          <select id="selectTime">
+            <option value="300" selected>05:00</option>
+            <option value="600">10:00</option>
+            <option value="900">15:00</option>
+            <option value="1200">20:00</option>
+            <option value="1500">25:00</option>
+          </select>
+          <button id="modalclose">閉じる</button>
+        </div>
+      </div>
       <!-- <svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
         <g>
           <title>Pie Timer</title>

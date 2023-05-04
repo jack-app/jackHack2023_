@@ -7,6 +7,8 @@ const success = document.getElementById("success");
 const fail = document.getElementById("fail");
 const circle = document.querySelector(".timer-circle");
 const selectTime = document.getElementById("selectTime");
+const timeSetButton = document.querySelector(".modalbtn");
+const modalCloseButton = document.querySelector(".modalclose");
 const topAudio = new Audio("./audio/Lovers.mp3");
 const successAudio = new Audio("./audio/幸せな誓い.mp3");
 const failAudio = new Audio("./audio/さようなら.mp3");
@@ -79,7 +81,14 @@ function resetTimer() {
   circle.style.strokeDashoffset = initialOffset;
   i = 0;
 }
-
+function timeSetModal() {
+  timemodal.style.display = "block";
+}
+function timeSetModalClose() {
+  timemodal.style.display = "none";
+}
+timeSetButton.addEventListener("click", timeSetModal);
+modalCloseButton.addEventListener("click", timeSetModalClose);
 startButton.addEventListener("click", startTimer);
 stopButton.addEventListener("click", stopTimer);
 resetButton.addEventListener("click", resetTimer);
