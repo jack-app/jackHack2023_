@@ -1,0 +1,359 @@
+html,
+body {
+  background-color: #f7f5eb;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.timer {
+  position: relative;
+  /* float: left; */
+}
+
+#start {
+  font-size: 3rem;
+  font-family: "Avenir Next";
+  padding: 0.5rem 5rem;
+  background-color: #eac7c7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin: 0rem 1rem;
+}
+
+#reset {
+  font-size: 3rem;
+  font-family: "Avenir Next";
+  padding: 0.5rem 5rem;
+  background-color: #b0daff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin: 0rem 1rem;
+}
+
+.display {
+  text-align: center;
+  line-height: 3em;
+  font-size: 2.5em;
+  position: absolute;
+  top: 300px;
+  left: 430px;
+  width: 14%;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 32px;
+  z-index: 10;
+}
+.timeModal {
+  display: none;
+  position: absolute;
+  z-index: 1001;
+  top: 300px;
+  right: 410px;
+  width: auto;
+  height: 100px;
+  border-radius: 15px;
+}
+.timeModal,
+select,
+option {
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  font-size: 32px;
+  background: white;
+  border-radius: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin: auto;
+}
+
+.modal-content {
+  z-index: 1000;
+  background-color: #f7f5eb;
+  padding: 10px;
+  width: 70%;
+  height: 350px;
+  top: 50%;
+  left: 15%;
+  margin: 800px 137px;
+  text-align: center;
+}
+
+.modal-content p {
+  color: #a9907e;
+  font-size: 50px;
+  font-family: "Avenir Next";
+  text-align: center;
+}
+
+.button-wrapper1 {
+  margin-top: 20%;
+  margin-left: 15%;
+  margin-bottom: 200px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  /* text-align: center; */
+  margin: 0 auto;
+  width: 80%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.success .fail {
+  border: none;
+  background: transparent;
+}
+.button-wrapper2 {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 60%;
+}
+
+/* kanransya */
+.canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0em 0em;
+  margin: 0;
+}
+
+.canvas {
+  position: absolute;
+  top: 0px;
+  left: 140px;
+  z-index: 2;
+  /* width: 100%;
+    height: 100%; */
+}
+
+.kanransha {
+  overflow: hidden;
+}
+.sample-1 {
+  position: relative;
+  width: 75%;
+  padding-top: 70%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.sample-1:after {
+  content: "";
+  display: block;
+  width: 85%;
+  padding-top: 85%;
+  border: solid 2px #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.rotate {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.rotate .rotate-ctn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: 100s linear big-circle infinite;
+  /* 大枠を回転させているアニメーション */
+}
+
+.rotate .box {
+  position: absolute;
+  width: 100px;
+  height: 50%;
+  transform-origin: 50% 100%;
+}
+
+/* 各コンテンツの文字を上向きにする */
+
+.rotate .box.box-1 {
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+
+.rotate .box.box-2 {
+  left: 50%;
+  transform: translate(-50%, 0) rotate(135deg);
+}
+
+.rotate .box.box-3 {
+  left: 50%;
+  transform: translate(-50%, 0) rotate(90deg);
+}
+
+.rotate .box.box-4 {
+  left: 50%;
+  transform: translate(-50%, 0) rotate(45deg);
+}
+
+.rotate .box.box-5 {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.rotate .box.box-6 {
+  left: 50%;
+  transform: translate(-50%, 0) rotate(315deg);
+}
+
+.rotate .box.box-7 {
+  left: 50%;
+  transform: translate(-50%, 0) rotate(270deg);
+}
+
+.rotate .box.box-8 {
+  left: 50%;
+  transform: translate(-50%, 0) rotate(225deg);
+}
+
+.rotate .box .parts {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 24px 0px;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  /* boxの角の丸さ */
+}
+
+/* 文字のみ回転 */
+
+.one {
+  transform: rotate(180deg);
+}
+
+.two {
+  transform: rotate(-135deg);
+}
+
+.three {
+  transform: rotate(-90deg);
+}
+
+.four {
+  transform: rotate(-45deg);
+}
+
+.five {
+  transform: rotate(0deg);
+}
+
+.six {
+  transform: rotate(-315deg);
+}
+
+.seven {
+  transform: rotate(-270deg);
+}
+
+.eight {
+  transform: rotate(-225deg);
+}
+
+/* timer */
+
+.datingPlan {
+  /* display: flex; */
+  margin: 150px 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: #eae0da;
+  border-radius: 10px;
+  border: 0.5px solid #000000;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.number {
+  font-size: 35px;
+  line-height: 75px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background-color: #fff;
+  margin: 10px 20px 8px 0;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+}
+
+.time {
+  text-align: center;
+  /*テキストを上下中央に*/
+  line-height: 75px;
+  font-size: 35px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background-color: #fff;
+  margin: 10px 50px 8px 0;
+  height: 70px;
+  width: 180px;
+}
+
+.memo {
+  font-size: 50px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  width: 700px;
+  height: 65px;
+  margin: 10px;
+  text-align: center;
+}
+#last {
+  margin-bottom: 50px;
+}
+
+.signBoard {
+  font-size: 35px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
