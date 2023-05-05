@@ -26,7 +26,7 @@ let timer;
 let time = 0;
 let initTime = 0;
 const times = [time1, time2, time3, time4, time5, time6, time7, time8];
-const timeList = [0, 0, 0, 0, 0, 0, 0, 0];
+const timeList = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 function playTopAudio() {
   if (time == initTime / 2 + 10) {
     topAudio.play();
@@ -45,7 +45,7 @@ function sendAlert() {
 
 function setTime(i, t, l) {
   a = (initTime * i) / 8;
-  l[i - 1] = parseInt(a);
+  l[i] = parseInt(a);
   const minutes = Math.floor(a / 60)
     .toString()
     .padStart(2, "0");
@@ -124,7 +124,7 @@ selectTime.addEventListener("change", () => {
   initTime = selectTime.value;
   timeModal.style.display = "none";
   for (let i = 0; i < times.length; i++) {
-    setTime(i + 1, times[i], timeList);
+    setTime(i, times[i], timeList);
   }
   console.log(timeList);
   updateTimerDisplay();

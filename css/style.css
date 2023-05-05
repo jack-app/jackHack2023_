@@ -170,7 +170,7 @@ button {
   display: block;
   width: 85%;
   padding-top: 85%;
-  border: solid 2px #000;
+  border: solid 6px #bdbdbd;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -203,9 +203,35 @@ button {
   height: 50%;
   transform-origin: 50% 100%;
 }
-
+.box::after {
+  content: ""; /* 疑似要素のコンテンツを空にする */
+  position: absolute; /* 疑似要素を絶対的な位置に配置 */
+  top: 0;
+  left: 50%; /* 要素の中央に縦線を描画する */
+  transform: translateX(-50%);
+  width: 6px; /* 縦線の太さ */
+  height: 100%; /* 縦線の高さ */
+  background-color: #bdbdbd; /* 縦線の色 */
+}
 /* 各コンテンツの文字を上向きにする */
-
+.pillar1 {
+  left: 50%;
+  transform: translate(-50%, 0) rotate(160deg);
+}
+.pillar2 {
+  left: 50%;
+  transform: translate(-50%, 0) rotate(200deg);
+}
+.pillar1 .pillar2 ::after {
+  content: ""; /* 疑似要素のコンテンツを空にする */
+  position: absolute; /* 疑似要素を絶対的な位置に配置 */
+  top: 0;
+  left: 50%; /* 要素の中央に縦線を描画する */
+  transform: translateX(-50%);
+  width: 6px; /* 縦線の太さ */
+  height: 100%; /* 縦線の高さ */
+  background-color: #bdbdbd; /* 縦線の色 */
+}
 .rotate .box.box-1 {
   left: 50%;
   transform: translate(-50%, 0) rotate(180deg);
@@ -259,7 +285,9 @@ button {
 }
 
 /* 文字のみ回転 */
-
+.parts {
+  z-index: 2;
+}
 .one {
   transform: rotate(180deg);
 }
