@@ -29,6 +29,7 @@ const times = [time1, time2, time3, time4, time5, time6, time7, time8];
 const timeList = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 function playTopAudio() {
   if (time == initTime / 2 + 10) {
+    topAudio.volume = 0.2;
     topAudio.play();
   }
 }
@@ -110,12 +111,14 @@ timeDisplay.addEventListener("click", () => {
 success.addEventListener("click", () => {
   modal.style.display = "none";
   topAudio.pause();
+  successAudio.value = 0.2;
   successAudio.play();
 });
 
 fail.addEventListener("click", () => {
   modal.style.display = "none";
   topAudio.pause();
+  failAudio.value = 0.2;
   failAudio.play();
 });
 
